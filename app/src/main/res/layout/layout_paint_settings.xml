@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	tools:context=".MainActivity"
+	android:background="@color/colorAccent">
+
+	<TextView
+		android:id="@+id/tv_note_paint_width"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		android:layout_marginLeft="8dp"
+		android:text="画笔宽度"/>
+
+	<SeekBar
+		style="@style/Widget.AppCompat.SeekBar.Discrete"
+		android:layout_height="wrap_content"
+		android:layout_width="0dp"
+		android:max="10"
+		android:progress="6"
+		android:id="@+id/seekBar"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_note_paint_width"/>
+
+	<TextView
+		android:id="@+id/tv_note_paint_type"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintStart_toStartOf="parent"
+		android:layout_marginLeft="8dp"
+		android:text="画笔类型"
+		app:layout_constraintTop_toBottomOf="@+id/seekBar"/>
+
+	<RadioGroup
+		android:layout_height="40dp"
+		android:layout_marginTop="8dp"
+		android:layout_width="0dp"
+		app:layout_constraintTop_toBottomOf="@+id/tv_note_paint_type"
+		app:layout_constraintStart_toStartOf="parent"
+		android:layout_marginLeft="8dp"
+		android:layout_marginStart="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:layout_marginEnd="8dp"
+		android:layout_marginRight="8dp"
+		android:orientation="horizontal"
+		android:scrollbars="horizontal">
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="点"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="路径"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="直线"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="矩形"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="圆"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="矩形填充"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="圆填充"/>
+	</RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
