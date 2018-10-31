@@ -1,4 +1,4 @@
-package com.xperfect.cn.helper.life.widget;
+package com.xperfect.cn.helper.life.widget.drawingbaord;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -163,6 +163,15 @@ public class DrawingBoard extends SurfaceView implements SurfaceHolder.Callback 
      */
     public void setColor(String color) {
         this.currentColor = Color.parseColor(color);
+    }
+
+    /**
+     * 设置画笔的颜色
+     *
+     * @param color 颜色
+     */
+    public void setColor(int color) {
+        this.currentColor = color;
     }
 
     /**

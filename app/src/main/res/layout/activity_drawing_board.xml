@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity"
+	android:background="@color/colorPrimary"
+	android:padding="8dp">
+
+	<android.support.v7.widget.AppCompatButton
+		android:id="@+id/btn_set_paint"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		android:text="画笔设置"/>
+
+	<com.xperfect.cn.helper.life.widget.drawingbaord.DrawingBoard
+		android:id="@+id/dbv_main"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/btn_set_paint"/>
+
+	<android.support.constraint.ConstraintLayout
+		android:id="@+id/lyt_paint_settings"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#dbdbdb"
+		android:padding="8dp"
+		android:visibility="visible"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/btn_set_paint">
+
+		<TextView
+			android:id="@+id/tv_note_paint_width"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:text="画笔宽度"/>
+
+		<SeekBar
+			android:id="@+id/seekBar"
+			style="@style/Widget.AppCompat.SeekBar"
+			android:layout_height="wrap_content"
+			android:layout_width="0dp"
+			android:max="50"
+			android:progress="8"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/tv_note_paint_width"/>
+
+		<TextView
+			android:id="@+id/tv_note_paint_type"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintStart_toStartOf="parent"
+			android:text="画笔类型"
+			app:layout_constraintTop_toBottomOf="@+id/seekBar"/>
+
+		<RadioGroup
+			android:id="@+id/rg_paint_width"
+			android:layout_height="40dp"
+			android:layout_width="0dp"
+			app:layout_constraintTop_toBottomOf="@+id/tv_note_paint_type"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:orientation="horizontal"
+			android:scrollbars="horizontal">
+
+			<RadioButton
+				android:id="@+id/rbv_point"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="点"/>
+
+			<RadioButton
+				android:id="@+id/rbv_path"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="路径"/>
+
+			<RadioButton
+				android:id="@+id/rbv_line"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="直线"/>
+
+			<RadioButton
+				android:id="@+id/rbv_rect"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="矩形"/>
+
+			<RadioButton
+				android:id="@+id/rbv_circle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="圆"/>
+
+			<RadioButton
+				android:id="@+id/rbv_fill_rect"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="矩形填充"/>
+
+			<RadioButton
+				android:id="@+id/rbv_fill_circle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="圆填充"/>
+		</RadioGroup>
+
+		<com.larswerkman.holocolorpicker.ColorPicker
+			android:id="@+id/cpv_color"
+			android:layout_width="160dp"
+			android:layout_height="160dp"
+			app:color_wheel_radius="56dp"
+			android:layout_marginTop="8dp"
+			app:layout_constraintTop_toBottomOf="@+id/rg_paint_width"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"/>
+
+	</android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

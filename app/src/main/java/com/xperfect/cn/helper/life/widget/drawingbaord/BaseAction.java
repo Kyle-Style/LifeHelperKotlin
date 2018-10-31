@@ -1,4 +1,4 @@
-package com.xperfect.cn.helper.life.widget;
+package com.xperfect.cn.helper.life.widget.drawingbaord;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
